@@ -23,16 +23,16 @@ public class Field {
 	static final Color PLAYER_1_COL_HOVER = new Color(255, 204, 204);
 	static final Color PLAYER_2_COL_HOVER = new Color(204, 255, 204);
 	
-	static final Set<String> firstCol = Set.of("00","01","02");
-	static final Set<String> secondCol = Set.of("10","11","12");
-	static final Set<String> thirdCol = Set.of("20","21","22");
+	static final Set<String> firstCol = new HashSet<String>(Arrays.asList("00","01","02"));
+	static final Set<String> secondCol = new HashSet<String>(Arrays.asList("10","11","12"));
+	static final Set<String> thirdCol = new HashSet<String>(Arrays.asList("20","21","22"));
 	
-	static final Set<String> firstRow = Set.of("00","10","20");
-	static final Set<String> secondRow = Set.of("01","11","21");
-	static final Set<String> thirdRow = Set.of("02","12","22");
+	static final Set<String> firstRow = new HashSet<String>(Arrays.asList("00","10","20"));
+	static final Set<String> secondRow = new HashSet<String>(Arrays.asList("01","11","21"));
+	static final Set<String> thirdRow = new HashSet<String>(Arrays.asList("02","12","22"));
 	
-	static final Set<String> firstDiag = Set.of("00","11","22");
-	static final Set<String> secondDiag = Set.of("02","11","20");
+	static final Set<String> firstDiag = new HashSet<String>(Arrays.asList("00","11","22"));
+	static final Set<String> secondDiag = new HashSet<String>(Arrays.asList("02","11","20"));
 	
 	static final List<Set<String>> winningConfigs = Arrays.asList(
 			firstRow,secondRow,thirdRow,firstCol,secondCol,thirdCol,firstDiag,secondDiag);
